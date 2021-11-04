@@ -1,19 +1,18 @@
 $(document).ready(function() {
   $("form#animal-form").submit(function(event) {
     event.preventDefault();
-   // $("#content-container").children().hide();//
     const animal = $("#animal-select").val();
   
 
     if (animal === "Turtle") {
+      $('#content').hide();
       $('#turtle-div').show();
-      $('#snake-div, #insect-div').hide(); 
     } else if (animal === "Snake") {
+      $('#content').hide();
       $('#snake-div').show();
-      $('#turtle-div, #insect-div').hide();
     } else {
+      $('#content').hide();
       $('#insect-div').show();
-      $('#turtle-div, #snake-div').hide();
     }  
   });
 });
